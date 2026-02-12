@@ -1,0 +1,465 @@
+/* Import Century Gothic font */
+@import url('https://fonts.cdnfonts.com/css/century-gothic');
+
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Century Gothic', 'CenturyGothic', 'AppleGothic', sans-serif;
+    background: #9553db;
+    color: #4527A0;
+    background: linear-gradient(90deg, rgba(149, 83, 219, 1) 0%, rgba(207, 175, 227, 1) 49%, rgba(239, 217, 255, 1) 100%);
+    min-height: 100vh;
+    background-attachment: fixed;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Navigation Bar */
+.navbar {
+    background-color: #4527A0;
+    box-shadow: 0 2px 10px rgba(69, 39, 160, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: 1rem 0;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #ffffff;
+    display: flex;
+    gap: 0.75rem;
+}
+
+.logo-image {
+    height: 2.5rem;
+    width: auto;
+    display: block;
+}
+
+.logo span {
+    line-height: 1;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    padding: 0.5rem 1.5rem;
+    border-radius: 25px;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 5rem 0 3rem;
+}
+
+.hero-title {
+    font-size: 4rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.3);
+}
+
+.hero-subtitle {
+    font-size: 1.5rem;
+    font-weight: 300;
+    opacity: 0.9;
+}
+
+/* Carousel Section */
+.carousel-section {
+    padding: 3rem 0;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    font-weight: bold;
+}
+
+.carousel {
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+    overflow: hidden;
+    height: 600px;
+}
+
+.carousel-track-container {
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(69, 39, 160, 0.3);
+    height: 100%;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    height: 100%;
+}
+
+.carousel-slide {
+    min-width: 100%;
+    position: relative;
+    height: 100%;
+}
+
+.carousel-slide img {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.project-link {
+    display: block;
+    position: relative;
+    text-decoration: none;
+    height: 100%;
+    width: 100%;
+}
+
+.slide-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(69, 39, 160, 0.8);
+    color: white;
+    padding: 1rem;
+    font-size: 1.2rem;
+    text-align: center;
+    border-radius: 0 0 15px 15px;
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.9);
+    color: #4527A0;
+    border: none;
+    font-size: 1.25rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 10;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.carousel-btn:hover {
+    background: white;
+    box-shadow: 0 3px 10px rgba(69, 39, 160, 0.3);
+}
+
+.carousel-btn.prev {
+    left: 10px;
+}
+
+.carousel-btn.next {
+    right: 10px;
+}
+
+.carousel-indicators {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 1.5rem;
+}
+
+.indicator {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(69, 39, 160, 0.3);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.indicator.active {
+    background: #4527A0;
+    transform: scale(1.2);
+}
+
+/* Skills Section */
+.skills-section {
+    padding: 4rem 0;
+    background: rgba(255, 255, 255, 0.3);
+    margin: 3rem 0;
+    border-radius: 20px;
+}
+
+.skills-grid {
+    display: grid;
+    gap: 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.skill-item {
+    background: rgba(255, 255, 255, 0.6);
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(69, 39, 160, 0.1);
+}
+
+.skill-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.8rem;
+}
+
+.skill-name {
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.skill-percentage {
+    font-weight: bold;
+    color: #4527A0;
+}
+
+.skill-bar {
+    height: 12px;
+    background: rgba(149, 83, 219, 0.2);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.skill-progress {
+    height: 100%;
+    background: linear-gradient(90deg, #9553db 0%, #4527A0 100%);
+    border-radius: 10px;
+    transition: width 1s ease-in-out;
+}
+
+/* Project Details Page */
+.project-details {
+    padding: 3rem 0;
+}
+
+.back-link {
+    display: inline-block;
+    color: #4527A0;
+    text-decoration: none;
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    transition: all 0.3s ease;
+}
+
+.back-link:hover {
+    transform: translateX(-5px);
+}
+
+.project-title {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.project-description {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-bottom: 3rem;
+    opacity: 0.9;
+}
+
+.project-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+.gallery-item {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(69, 39, 160, 0.2);
+    transition: transform 0.3s ease;
+    position: relative;
+}
+
+.gallery-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(69, 39, 160, 0.3);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.gallery-item .main-image {
+    display: block;
+}
+
+.gallery-item .hover-image {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.project-info {
+    background: rgba(255, 255, 255, 0.6);
+    padding: 2rem;
+    border-radius: 15px;
+    margin-top: 3rem;
+}
+
+.project-info h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+}
+
+.info-item h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: #4527A0;
+}
+
+.info-item p {
+    font-size: 1rem;
+    opacity: 0.8;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.2rem;
+    }
+
+    .nav-menu {
+        gap: 1rem;
+    }
+
+    .nav-link {
+        padding: 0.4rem 1rem;
+        font-size: 0.9rem;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .carousel {
+        height: 400px;
+    }
+
+    .carousel-btn {
+        font-size: 0.9375rem;
+        width: 2rem;
+        height: 2rem;
+    }
+
+    .project-title {
+        font-size: 2rem;
+    }
+
+    .project-gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .info-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        padding: 3rem 0 2rem;
+    }
+
+    .hero-title {
+        font-size: 2rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+
+    .logo {
+        font-size: 1.4rem;
+    }
+
+    .logo-image {
+        height: 2rem;
+    }
+
+    .carousel {
+        height: 300px;
+    }
+
+    .carousel-btn {
+        font-size: 0.75rem;
+        width: 1.75rem;
+        height: 1.75rem;
+    }
+
+    .skills-section {
+        padding: 2rem 0;
+    }
+}
+
+/* Tippy.js custom styles */
+.tippy-box {
+    background-color: #000000 !important;
+    color: #ffffff !important;
+    font-size: 0.9rem;
+    text-align: justify;
+}
+
+.tippy-arrow {
+    color: #000000 !important;
+}
+
+.tippy-content {
+    padding: 10px 15px;
+}
